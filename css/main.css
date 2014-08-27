@@ -1,4 +1,59 @@
-main {
+body, h1{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+}
+
+#container{
 	margin: auto;
+	margin-top: 150px;
 	display: table;
+	height: auto;
+	border-radius: 15px;
+}
+
+#ansContainer{
+	background-color: gray;
+	border-radius: 0px 0px 5px 5px;
+	width: 250px;
+	margin: auto;
+	padding: 10px;
+	margin-top: -75px;
+	z-index: -1;
+	position: relative;
+}
+
+#ansContainer p{
+	margin: 0;
+	text-align: center;
+}
+
+#controls {
+    width: 300px;
+    border: 5px solid red;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    height: inherit;
+    background-color: white;
+}
+
+#controls h1{
+	margin-bottom: 10px;
+}
+
+#controls button{
+	margin-top: 15px;
+	background-color: white;
+	border: 4px solid black;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#controls button:hover{
+	border: 4px solid red;
 }

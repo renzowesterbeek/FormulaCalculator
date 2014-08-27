@@ -2,19 +2,25 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>ABC</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Formula Calculator</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/animations.js"></script>
 	<script src="js/functions.js"></script>
 	<script src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<main>
-	<h1>Calculator</h1>
-	<input name="input" id="input" value="1x^2+3x+2">
-	<button onclick="initCalc(document.getElementById('input').value)">Calculate</button>
-	<p id="answers"></p>
-</main>
+<div id="container">
+	<div id="controls">
+		<h1>Calculator</h1>
+		<input name="input" id="input" value="1x^2+3x+2"><br>
+		<button onclick="initCalc(document.getElementById('input').value)" id="submit">Calculate</button>
+	</div>
+	<div id="ansContainer">
+		<p id="answers"></p>
+	</div>
+</div>
 <script>
 var answer = document.getElementById("answers");
 answer.innerHTML = "";
