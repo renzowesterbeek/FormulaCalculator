@@ -1,5 +1,3 @@
-// 2x^2+4x+10
-
 function contains(s, bs) {
 	return s.indexOf(bs) > -1 ? true : false;
 }
@@ -37,15 +35,23 @@ function getABCVals(input) {
 	var bOp = getOperator(originalInput, b);
 	var cOp = getOperator(originalInput, c);
 	
-	function convertToNum(part) {
-		// Convert string of aOp + a to one float
+	function convertToNum(part, partOp) {
+	var returnS = parseFloat(part);
+		if (part !== undefined){
+			if (partOp == "+") {
+				return returnS;
+			} else {
+				//return parseFloat("-" + part);
+				return -returnS;
+			}
+		} else {
+			return 0;
+		}
 	}
 	
 	// Find way to return a, b and c values
 	
-	console.log("A: " + aOp + a);
-	console.log("B: " + bOp + b);
-	console.log("C: " + cOp + c);
+	return [convertToNum(a, aOp), convertToNum(b, bOp), convertToNum(c, cOp)];
 }
 
 
