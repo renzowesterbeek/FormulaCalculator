@@ -70,8 +70,7 @@ function calcX(abcArray) {
 		x1 = (-b-sqrtD)/(2*a);
 		x2 = (-b+sqrtD)/(2*a);
 	} else {
-		// No solutions
-		console.log("No solutions");
+		return false;
 	}
 	
 	return [a, b, c, d, x1, x2];
