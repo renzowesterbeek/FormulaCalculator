@@ -36,20 +36,17 @@ function getABCVals(input) {
 	var cOp = getOperator(originalInput, c);
 	
 	function convertToNum(part, partOp) {
-	var returnS = parseFloat(part);
+		var returnS = parseFloat(part);
 		if (part !== undefined){
 			if (partOp == "+") {
 				return returnS;
 			} else {
-				//return parseFloat("-" + part);
 				return -returnS;
 			}
 		} else {
 			return 0;
 		}
 	}
-	
-	// Find way to return a, b and c values
 	
 	return [convertToNum(a, aOp), convertToNum(b, bOp), convertToNum(c, cOp)];
 }
