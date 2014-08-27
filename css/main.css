@@ -6,6 +6,8 @@ body, h1{
 body{
 	height: 100%;
 	width: 100%;
+	background-color: #23282A;
+	color: #98AEB6;
 }
 
 #container{
@@ -16,8 +18,12 @@ body{
 	border-radius: 15px;
 }
 
+#inputField{
+	color: black;
+}
+
 #ansContainer{
-	background-color: gray;
+	background-color: #637176;
 	border-radius: 0px 0px 5px 5px;
 	width: 250px;
 	margin: auto;
@@ -25,6 +31,7 @@ body{
 	margin-top: -75px;
 	z-index: -1;
 	position: relative;
+	color: black;
 }
 
 #ansContainer p{
@@ -34,12 +41,12 @@ body{
 
 #controls {
     width: 300px;
-    border: 5px solid red;
+    border: 0px solid black;
     text-align: center;
     padding: 20px;
     border-radius: 15px;
     height: inherit;
-    background-color: white;
+    background-color: #2E3437;
 }
 
 #controls h1{
@@ -48,12 +55,14 @@ body{
 
 #controls button{
 	margin-top: 15px;
-	background-color: white;
-	border: 4px solid black;
+	background-color: #2E3437;
+	border: 4px solid #98AEB6;
 	border-radius: 10px;
 	padding: 5px;
 }
 
 #controls button:hover{
-	border: 4px solid red;
+	border: 4px solid #98AEB6;
+	background-color: #98AEB6;
+	color: black;
 }
