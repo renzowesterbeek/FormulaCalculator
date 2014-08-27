@@ -52,13 +52,27 @@ function getABCVals(input) {
 }
 
 
-function calcX(a, b, c) {
+function calcX(abcArray) {
+	var a = abcArray[0];
+	var b = abcArray[1];
+	var c = abcArray[2];
 	
 	var d = (b)*(b)-4*a*c;
-	var sqrtD = math.sqrt(d);
 	
-	var x1 = (-b-sqrtD)/(2*a);
-	var x2 = (-b+sqrtD)/(2*a);
+	var x1 = undefined;
+	var x2 = undefined;
 	
-	return [x1, x2, d];
+	if (d === 0) {
+		var sqrtD = Math.sqrt(d);
+		x1 = (-b-sqrtD)/(2*a);
+	} else if (d > 0) {
+		var sqrtD = Math.sqrt(d);
+		x1 = (-b-sqrtD)/(2*a);
+		x2 = (-b+sqrtD)/(2*a);
+	} else {
+		// No solutions
+		console.log("No solutions");
+	}
+	
+	return [a, b, c, d, x1, x2];
 }

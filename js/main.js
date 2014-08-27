@@ -1,9 +1,8 @@
-var abcVals = [];
-
 function initCalc (formula) {
-	// Checks if formula isset.
+	// Checks if formula inptu is set
 	if (formula != 0) {
-		var abcArray = getABCVals(formula);
-		console.log(abcArray);
+		var abcVals = getABCVals(formula);
+		var XnDVals = calcX(abcVals);
+		console.log(XnDVals);
 	}
 }
