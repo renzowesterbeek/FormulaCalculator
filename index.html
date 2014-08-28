@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Formula Calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="js/animations.js"></script>
 	<script src="js/functions.js"></script>
@@ -14,7 +15,7 @@
 <div id="container">
 	<div id="controls">
 		<h1>Calculator</h1>
-		<input name="input" id="inputField" value="1x^2+3x+2" onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()" autofocus><br>
+		<input name="input" id="inputField" value="1x^2+3x+2" onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()"><br>
 		<button onclick="initCalc(document.getElementById('inputField').value)" id="submit">Calculate</button>
 	</div>
 	<div id="ansContainer">
@@ -24,6 +25,7 @@
 <footer>
 <span>Coded by Renzo Westerbeek</span>
 </footer>
+
 <script>
 var answer = document.getElementById("answers");
 answer.innerHTML = "";
