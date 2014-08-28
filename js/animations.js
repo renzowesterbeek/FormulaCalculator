@@ -1,8 +1,6 @@
 $(document).ready(function(){
-	var firstEnter = true; /* change this to cookie */
-	
-	if (firstEnter) {
-		firstEnter = false;
+	// Displays alert when the user goes to site for first time.
+	if (getCookie("firstEnter") !== "no") {
 		$('footer').addClass('animated rotateInDownRight');
 		$('#container').addClass('animated bounceInDown');
 		setTimeout(function(){
@@ -31,9 +29,7 @@ $(document).ready(function(){
 			isOut = false;
 		});
 	}
-	
-	
-	
+
 	$( "#submit" ).click(function() {
 		if (isOut) {
 			animateAnsOut();
@@ -46,6 +42,7 @@ $(document).ready(function(){
 	$( "#getStarted" ).click(function() {
 		$( "#firstEnterContent" ).addClass('animated zoomOutDown');
 		setTimeout(function(){$( "#firstEnterParent" ).css("display", "none")}, 900);
+		setCookie("firstEnter", "no", 365);
 	});
 	
 	$("#inputField").focus(function(){
