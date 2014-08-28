@@ -14,13 +14,16 @@
 <div id="container">
 	<div id="controls">
 		<h1>Calculator</h1>
-		<input name="input" id="inputField" value="1x^2+3x+2"><br>
+		<input name="input" id="inputField" value="1x^2+3x+2" onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()" autofocus><br>
 		<button onclick="initCalc(document.getElementById('inputField').value)" id="submit">Calculate</button>
 	</div>
 	<div id="ansContainer">
 		<p id="answers"></p>
 	</div>
 </div>
+<footer>
+<span>Coded by Renzo Westerbeek</span>
+</footer>
 <script>
 var answer = document.getElementById("answers");
 answer.innerHTML = "";

@@ -24,6 +24,9 @@ function getABCVals(input) {
 	var part = partsArray[i];
 		if (contains(part, "^")) {
 			a = part.slice(0, part.length-3);
+			if (a == false){
+				a = "1";
+			}
 		} else if (contains(part, "x")){
 			b = part.slice(0, part.length-1);
 		} else {
