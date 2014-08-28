@@ -2,7 +2,13 @@ $(document).ready(function(){
 	var firstEnter = true; /* change this to cookie */
 	
 	if (firstEnter) {
-		console.log("first");
+		firstEnter = false;
+		$('footer').addClass('animated rotateInDownRight');
+		$('#container').addClass('animated bounceInDown');
+		setTimeout(function(){
+			$('#firstEnterParent').addClass('animated bounceInDown');
+			$('#firstEnterParent').css("display", "table");
+		}, 200);
 	} else {
 		$('footer').addClass('animated rotateInDownRight');
 		$('#container').addClass('animated bounceInDown');
@@ -35,6 +41,11 @@ $(document).ready(function(){
 		} else {
 			animateAnsIn();
 		}
+	});
+	
+	$( "#getStarted" ).click(function() {
+		$( "#firstEnterContent" ).addClass('animated zoomOutDown');
+		setTimeout(function(){$( "#firstEnterParent" ).css("display", "none")}, 900);
 	});
 	
 	$("#inputField").focus(function(){

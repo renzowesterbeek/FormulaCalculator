@@ -20,7 +20,7 @@ body{
 
 #inputField{
 	color: #23282A;
-	z-index: 1;
+	z-index: 3;
 }
 
 #ansContainer{
@@ -58,7 +58,7 @@ body{
 	cursor: default;
 }
 
-#controls button{
+button{
 	margin-top: 20px;
 	background-color: #2E3437;
 	border: 4px solid #98AEB6;
@@ -66,7 +66,7 @@ body{
 	padding: 5px;
 }
 
-#controls button:hover{
+button:hover{
 	border: 4px solid #98AEB6;
 	background-color: #98AEB6;
 	color: #23282A;
@@ -74,6 +74,41 @@ body{
 	-moz-transition: background-color 0.5s;
 	-o-transition: background-color 0.5s;
 	transition: background-color 0.5s;
+}
+
+#firstEnterParent{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	opacity: 0.9;
+	display: none;
+}
+
+#firstEnterContainer{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#firstEnterContent{
+	width: 600px;
+	background-color: #98AEB6;
+	margin: auto;
+	border-radius: 15px;
+	padding: 70px;
+	box-sizing: border-box;
+	color: #23282A;
+}
+
+#firstEnterContent button{
+	border: 4px solid #23282A;
+	background-color: #98AEB6;
+}
+
+#firstEnterContent button:hover{
+	background-color: #23282A;
+	color: #98AEB6;
 }
 
 footer{
